@@ -1,6 +1,6 @@
-# code-nautilus
+# emacs-nautilus
 
-This repo provides a visual studio code extension for Nautilus.
+This repo provides a emacs extension for Nautilus.
 
 ## Install Extension
 
@@ -11,5 +11,5 @@ wget -qO- https://raw.githubusercontent.com/harry-cpp/code-nautilus/master/insta
 ## Uninstall Extension
 
 ```
-rm -f ~/.local/share/nautilus-python/extensions/code-nautilus.py
+rm -f ~/.local/share/nautilus-python/extensions/emacs-nautilus.py
 ```
