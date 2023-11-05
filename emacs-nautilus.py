@@ -35,12 +35,12 @@ class EmacsExtension(GObject.GObject, Nautilus.MenuProvider):
             # If one of the files we are trying to open is a folder
             # create a new instance of emacs
             if os.path.isdir(filepath) and os.path.exists(filepath):
-                args = '--new-window '
+                args = ''
 
         if NEWWINDOW:
-            args = '--new-window '
+            args = ''
 
-        call(EMACS + ' ' + args + safepaths + '&', shell=True)
+        call(EMACS + ' ' + args + safepaths, shell=True)
 
     def get_file_items(self, *args):
         files = args[-1]
