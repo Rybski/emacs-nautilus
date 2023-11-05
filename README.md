@@ -1,3 +1,5 @@
+# !!!Not working yet!!!
+
 # emacs-nautilus
 
 This repo provides a emacs extension for Nautilus.
@@ -5,7 +7,7 @@ This repo provides a emacs extension for Nautilus.
 ## Install Extension
 
 ```
-wget -qO- https://raw.githubusercontent.com/harry-cpp/code-nautilus/master/install.sh | bash
+wget -qO- https://raw.githubusercontent.com/Rybski/emacs-nautilus/master/install.sh | bash
 ```
 
 ## Uninstall Extension
