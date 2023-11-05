@@ -13,20 +13,20 @@ from subprocess import call
 import os
 
 # path to emacs
-EMACS = 'emacs'
+EMACS = 'emacsclient'
 
 # what name do you want to see in the context menu?
 EMACSNAME = 'Emacs'
 
 # always create new window?
-NEWWINDOW = False
+# NEWWINDOW = False
 
 
 class EmacsExtension(GObject.GObject, Nautilus.MenuProvider):
 
     def launch_emacs(self, menu, files):
         safepaths = ''
-        args = ''
+        args = '-c -a \'emcas\' '
 
         for file in files:
             filepath = file.get_location().get_path()
@@ -34,13 +34,13 @@ class EmacsExtension(GObject.GObject, Nautilus.MenuProvider):
 
             # If one of the files we are trying to open is a folder
             # create a new instance of emacs
-            if os.path.isdir(filepath) and os.path.exists(filepath):
-                args = ''
+            # if os.path.isdir(filepath) and os.path.exists(filepath):
+            #   args = ''
 
-        if NEWWINDOW:
-            args = ''
+        # if NEWWINDOW:
+        #   args = ''
 
-        call(EMACS + ' ' + args + safepaths, shell=True)
+        call(EMACS + ' ' + args + safepaths + '&', shell=True)
 
     def get_file_items(self, *args):
         files = args[-1]
